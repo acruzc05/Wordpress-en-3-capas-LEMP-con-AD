@@ -333,3 +333,17 @@ sudo mysql -u root -e "GRANT ALL PRIVILEGES ON wpdb.* TO 'antonio'@'192.168.2.%'
 sudo mysql -u root -e "FLUSH PRIVILEGES;"
 ```
  
+#5. Screencash 
+A continuación dejo el enlace en el cual completo los siguientes puntos:  
+1. Mostrar estado de las máquinas: vagrant status.  
+2. Ping cada máquina a todas las demás.  
+3. Sistemas de archivos montados en los servidores web: df -h en cada servidor web.  
+4. Acceso a servidor MariaDB desde las máquinas serverweb1 y serverweb2.  
+5. Acceso a Wordpress desde la máquina anfitriona (Windows) y el puerto mapeado.  
+6. Mostrar el fichero /var/log/nginx/access.log en el balanceador de carga.  
+7. Mostrar el fichero /var/log/nginx/access.log en los servidores web.  
+8. Para el servidor web serverweb1 y volver a acceder a wordpress desde la máquina anfitriona.  
+9. Mostrar el fichero /var/log/nginx/access.log en los servidores web.  
+    <br/>
+    <br/>
+https://youtu.be/C8pr4fYFTSc
