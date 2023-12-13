@@ -1,5 +1,16 @@
 # Wordpress en 3 capas LEMP con Alta disponibilidad - Antonio Cruz Clavel - 13/12/2023
 # Índice
+1. Descripción
+2. Esquema
+3. Vagrantfile  
+4. Scripts de automatización  
+   4.1 Balanceador  
+   4.2 Server NFS  
+   4.3 Server web 1  
+   4.4 Server web 2  
+   4.5 Server BBDD  
+5. Screencash
+   
 # 1. Descripción del proyecto
 Con esta práctica se quiere dar a conocer como implementar una pila LEMP en una infraestructura de tres capas y desplegar el CMS "Wordpress".  
 La estructura sería la siguiente:  
@@ -91,7 +102,7 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 check_success
 
-# Configuración del Balanceador
+# Configurar el balanceador
 
 configuracion="
 upstream servidoresweb {
@@ -317,7 +328,7 @@ DB_PASSWORD="1234"
 DB_HOST="192.168.2.20"
 BIND_ADDRESS="192.168.2.%"
 
-# Cambiar dirección bindaddress
+# Cambiar dirección bind-address
 sudo sed -i "s/bind-address = 127.0.0.1/bind-address = ${BIND_ADDRESS}/" /etc/mysql/mariadb.conf.d/50-server.cnf
 
 # Reiniciar servicio MYSQL
